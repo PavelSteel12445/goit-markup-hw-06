@@ -15,12 +15,10 @@ a.article {
 
 /*container*/
 .container {
-  display: flex;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  flex-wrap: wrap;
 }
 ul {
   list-style: none;
@@ -62,8 +60,6 @@ body {
   line-height: 1.7;
   background-color: var(--color-background);
   font-family: "Roboto", sans-serif;
-  max-width: 1600px;
-  max-height: 2094px;
   margin: 0 auto;
   flex-shrink: 0;
 }
@@ -202,19 +198,20 @@ body {
 
 /*hero-section*/
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--color-footer);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/Img.jpg);
   margin: 0 auto;
-  background-size: 1600px;
+  background-size: cover;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   letter-spacing: 0.02em;
   background-repeat: no-repeat;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -479,11 +476,16 @@ body {
 }
 /*footer-section*/
 .footer-section {
-  background-color: #2f303a;
+  background-color: var(--color-footer);
   height: 252px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.container.footer {
+  display: flex;
+  align-items: baseline;
+}
+
 .adress-logo-nav {
   display: flex;
   align-items: center;
@@ -528,10 +530,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   margin-left: 70px;
-  margin-top: 12px;
-
-  width: 206px;
-  height: 80px;
 }
 .footer-box {
   margin-top: 9px;
@@ -571,8 +569,12 @@ body {
   margin-top: 20px;
 }
 .footer-feedback {
-  margin-top: 12px;
   margin-left: 93px;
+}
+.footer-button {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 20px;
 }
 .feedback-title {
   font-weight: 700;
@@ -581,10 +583,10 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-background);
+  margin: 0;
 }
 
 .feedback-input {
-  margin-top: 20px;
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -594,10 +596,6 @@ body {
   border-radius: 4px;
 }
 
-.footer-button {
-  margin-top: 48px;
-  margin-left: 12px;
-}
 .button-feedback {
   display: flex;
   align-items: center;
@@ -803,6 +801,7 @@ body {
   background-color: var(--color-background);
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px 40px;
 }
 .modal-button-close {
   display: flex;
@@ -831,13 +830,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-primary);
-  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 .form-control {
   position: relative;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-top: 10px;
 }
 
 .form-label {
@@ -847,7 +845,6 @@ body {
   line-height: 1.1;
   letter-spacing: 0.01em;
   color: var(--color-text);
-  margin-top: 10px;
 }
 
 .form-input {
@@ -883,6 +880,7 @@ body {
   fill: var(--color-primary);
 }
 .area-comments {
+  display: block;
   margin-top: 4px;
   width: 100%;
   height: 120px;
@@ -905,13 +903,11 @@ body {
 .terms {
   position: relative;
   margin-top: 10px;
-  padding-right: 40px;
-  padding-left: 40px;
 }
 .checkbox-box {
   position: absolute;
   top: 50%;
-  left: 52px;
+  left: 12px;
   transform: translateY(-50%);
   width: 16px;
   height: 15px;
@@ -948,6 +944,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-text);
+  user-select: none;
 }
 .contract-terms {
   font-weight: 400;
@@ -955,6 +952,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-accent);
+  user-select: none;
 }
 
 .button-box {
